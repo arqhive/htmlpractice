@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>
+      /* 기본 링크 */
+      a:link {
+        color: green;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      /* 방문했었던 링크 */
+      a:visited {
+        color: pink;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      /* 마우스 오버시 */
+      a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      /* 활성 링크 */
+      a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <p>
+      HTML 링크는 하이퍼 링크다. 링크를 클릭하여 다른 문서로 이동할 수 있다. <br />
+      링크가 텍스트일 필요는 없다. 이미지 또는 다른 HTML 요소가 될 수 있다.
+    </p>
+    <!-- URL 절대경로 사용 -->
+    <a href="https://www.w3schools.com/html/">Go to w3schools</a>
+
+    <!-- URL 로컬경로 사용 -->
+    <a href="html_images.asp">Local link</a>
+
+    <p>
+      기본적인 링크 색상(모든 브라우저)<br />
+      - 방문하지 않은 링크에는 밑줄이 그어져 파란색으로 표시<br />
+      - 방문한 링크는 밑줄이 그어지고 자주색으로 보임<br />
+      - 활성 링크에는 밑줄이 그어지고 빨간색으로 표시<br />
+      CSS를 사용하여 기본 색상을 변경할 수 있다.
+    </p>
+
+    <p>
+      target 속성은 링크 된 문서를 어떻게 열것인지 지정한다.
+    </p>
+    <a href="https://www.w3schools.com/" target="_blank">_blank 새 창, 새 탭</a>
+    <br />
+    <a href="https://www.w3schools.com/" target="_self">_self 동일한 창/탭(기본값)</a><br />
+    <a href="https://www.w3schools.com/" target="_parent">_parent 부모 프레임에서 연다. 바로 직전 탭이나 창에서 연다.</a><br />
+    <a href="https://www.w3schools.com/" target="_top">_top 현재 열려있는 최상위 브라우저 창에서 연다.</a><br />
+
+    <!-- title : 툴팁 텍스트 표기 -->
+
+    <p>
+      href 속성에 요소의 id값을 주면 책갈피 처럼 사용할 수 있다. 링크로 이동시 책갈피가 있는 위치로 스크롤 된다.
+    </p>
+  </body>
+
+</html>
