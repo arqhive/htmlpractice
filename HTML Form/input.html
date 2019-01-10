@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+  </head>
+
+  <body>
+    <!-- type 속성을 지정하지 않을 경우 기본적으로 "text" -->
+    <input name="firstname" type="text" />
+
+    <!-- password type -->
+    <input type="password" />
+
+    <!-- submit type -->
+    <input type="submit" />
+
+    <!-- reset type -->
+    <!-- form 안의 필드를 모두 초기화 시킴 -->
+    <input type="reset" />
+
+    <!-- radio type -->
+    <form>
+      <input type="radio" name="gender" value="male" checked> Male<br>
+      <input type="radio" name="gender" value="female"> Female<br>
+      <input type="radio" name="gender" value="other"> Other
+    </form>
+
+    <!-- checkbox type -->
+    <form>
+      <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+      <input type="checkbox" name="vehicle2" value="Car"> I have a car
+    </form>
+
+    <!-- button type -->
+    <input type="button" onclick="alert('Hello World!')" value="Click Me!">
+
+    <!-- 여기서 부터는 브라우저 에서 지원 안할수도 있음 -->
+    <!-- color type -->
+    <form>
+      Select your favorite color:
+      <input type="color" name="favcolor">
+    </form>
+
+    <!-- date type -->
+    <!-- min, max 속성으로 최저, 최고 날짜 지정 가능 -->
+    <form>
+      Birthday:
+      <input type="date" name="bday" min="2000-01-02">
+      <input type="date" name="bday" max="1979-12-31">
+    </form>
+
+    <!-- datetime-local type -->
+    <form>
+      Birthday (date and time):
+      <input type="datetime-local" name="bdaytime">
+    </form>
+
+    <!-- email type -->
+    <!-- 브라우저 지원에 따라 이메일 주소는 제출시 자동적으로 검증된다 -->
+    <form>
+      E-mail:
+      <input type="email" name="email">
+    </form>
+
+    <!-- file type -->
+    <form>
+      Select a file: <input type="file" name="myFile">
+    </form>
+
+    <!-- month type -->
+    <!-- 연과 월 지정 가능 -->
+    <form>
+      Birthday (month and year):
+      <input type="month" name="bdaymonth">
+    </form>
+
+    <!-- number type -->
+    <!-- min, max로 최소 최대 값 지정 가능 -->
+    <form>
+      Quantity (between 1 and 5):
+      <input type="number" name="quantity" min="1" max="5">
+    </form>
+
+    <!-- range type -->
+    <form>
+      <input type="range" name="points" min="0" max="10">
+    </form>
+
+    <!-- search type -->
+    <form>
+      Search Google:
+      <input type="search" name="googlesearch">
+    </form>
+
+    <!-- tel type safari8 에서만 지원 -->
+    <form>
+      Telephone:
+      <input type="tel" name="usrtel">
+    </form>
+
+    <!-- time type -->
+    <form>
+      Select a time:
+      <input type="time" name="usr_time">
+    </form>
+
+    <!-- url type -->
+    <!-- 브라우저 지원에 따라 주소는 제출시 자동적으로 검증된다 -->
+    <form>
+      Add your homepage:
+      <input type="url" name="homepage">
+    </form>
+
+    <!-- week type -->
+    <form>
+      Select a week:
+      <input type="week" name="week_year">
+    </form>
+
+  </body>
+
+</html>
