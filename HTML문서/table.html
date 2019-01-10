@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- 기본적으로 테이블에는 테두리가 지정되어있지 않다. -->
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        /* 테두리를 하나로 축소 한다 */
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        /* 셀 패딩 설정 */
+        padding: 15px;
+      }
+
+      th {
+        /* th 는 기본적으로 중앙 정렬된다. */
+        text-align: left;
+      }
+
+      table {
+        /* 셀 간격을 지정한다. */
+        /* collapse 가 설정 되어 있는 경우 효과가 없다. */
+        border-spacing: 5px;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <!-- 각 테이블 행은 tr 태그로 정의 한다. -->
+    <!-- 테이블 헤더가 th로 정의 된다. 기본적으로 th는 굵게 표시되고 중앙에 배치된다. -->
+    <!-- 테이블 데이터 / 셀이 td 태그로 정의된다. -->
+    <!-- td 에는 모든 종류의 HTML 요소가 포함될 수 있다. -->
+    <table style="width:100%">
+      <!-- caption 은 table 태그 바로 다음에 나와야 한다. -->
+      <caption>Table 연습</caption>
+      <tr>
+        <th>Firstname</th>
+        <!-- 다음 th는 2개의 열을 포함하게 된다. -->
+        <th colspan="2">Lastname</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+      <!-- 다음 행은 셀이 2개의 행에 걸쳐 있게 된다. -->
+      <tr>
+        <th rowspan="2">Telephone:</th>
+        <td>55577855</td>
+      </tr>
+    </table>
+  </body>
+
+</html>
