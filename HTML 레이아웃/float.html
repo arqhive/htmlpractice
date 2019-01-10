@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>CSS float template</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* header 스타일 */
+      header {
+        background-color: #666;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+      }
+
+      /* 서로 옆에 있는 두개의 열/상자 만들기 */
+      nav {
+        float: left;
+        width: 30%;
+        background: #ccc;
+        padding: 20px;
+        height: 300px;
+      }
+
+      /* 리스트 스타일 */
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      article {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        height: 300px;
+      }
+
+      /* 열 뒤에 플로트 삭제 */
+      section:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+
+      /* 작은 화면에서는 위에서부터 쌓여서 보여진다. */
+      @media (max-width: 600px) {
+
+        nav,
+        article {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h2>CSS Layout Float</h2>
+    <p>
+      이 예제에서, 우리는 헤더를 만들고, 두개의 컬럼/박스 그리고 푸터를 만든다. 작은 화면에서는, 컬럼은 각각의 위에 쌓일 것이다.
+    </p>
+    <p>
+      브라우저 창을 조절하게 되면 반응형 효과가 나타난다.
+    </p>
+    <header>
+      <h2>Cities</h2>
+    </header>
+
+    <section>
+      <nav>
+        <ul>
+          <li><a href="#">London</a></li>
+          <li><a href="#">Paris</a></li>
+          <li><a href="#">Tokyo</a></li>
+        </ul>
+      </nav>
+
+      <article>
+        <h1>London</h1>
+        <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+        <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+      </article>
+    </section>
+
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </body>
+
+</html>
