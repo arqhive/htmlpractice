@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>
+      /* li에 float:left 혹은 display:inline 속성을 주면 가로로 표시된다. */
+      #garo {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+      }
+
+      #garo li {
+        float: left;
+      }
+
+      #garo li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+      }
+
+      #garo li a:hover {
+        background-color: #111111;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 정렬되지 않은 목록 -->
+    <ul style="list-style-type:disc">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+
+    <!-- 정렬된 목록 -->
+    <!-- type 속성은 마커 유형을 정의한다. (1, A, a, I, i) -->
+    <ol type="i">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+
+    <!-- 설명 목록 (Description list) -->
+    <!-- dt 는 태그 지정 -->
+    <!-- dd 는 태그 설명 -->
+    <dl>
+      <dt>Coffee</dt>
+      <dd>- black hot drink</dd>
+      <dt>Milk</dt>
+      <dd>- white cold drink</dd>
+    </dl>
+
+    <!-- 목록을 Nesting 할 수 있다. -->
+    <ul>
+      <li>Coffee</li>
+      <li>Tea
+        <ul>
+          <li>Black tea</li>
+          <li>Green tea</li>
+        </ul>
+      </li>
+      <li>Milk</li>
+    </ul>
+
+    <!-- start 속성으로 정렬된 목록의 계산 시작 번호를 정할 수 있다. -->
+    <ol start="50">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+
+    <!-- 가로방향 목록 만들기 -->
+    <ul id="garo">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </body>
+
+</html>
