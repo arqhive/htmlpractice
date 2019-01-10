@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+  </head>
+
+  <!-- 배경 이미지를 적용하려면 background-image를 사용한다. -->
+  <!-- <body style="background-image:url('./image/unnamed.png')"> -->
+
+  <body>
+    <!-- map 태그로 이미지 맵 사용 -->
+    <!-- 이미지 맵은 클릭 가능한 영역이 있다. -->
+    <!-- usemap 속성에 map의 name 속성을 매칭한다 -->
+    <img src="./image/unnamed.png" alt="unnamed" usemap="#workmap" />
+
+    <map name="workmap">
+      <area shape="rect" coords="34,44,270,350" alt="Building" href="https://google.com" />
+      <area shape="rect" coords="290,172,333,250" alt="Somewhere" href="https://www.naver.com" />
+    </map>
+
+    <!-- picture 태그를 이요하여 브라우저가 장치에 가장 잘 맞는 이미지를 선택할 수 있다. -->
+    <!-- 일치하는 source 값을 읽어오고 나머지는 무시된다. -->
+    <!-- 마지막 요소는 반드시 img를 지정한다. picture나 source를 지원하지 않는 브라우저를 대응 -->
+    <picture>
+      <source media="(min-width: 650px)" srcset="./image/unnamed.png" />
+      <source media="(min-width: 465px)" srcset="./image/unnamed.png" />
+      <img src="./image/unnamed.png" alt="unnamed" style="width:auto" />
+    </picture>
+  </body>
+
+</html>
